@@ -243,7 +243,7 @@ img {
     margin: -25px 0 0 -25px;
     font-family: "Font Awesome\ 5 Free";
     font-weight: 900;
-    content: "\f067";
+    content: "\f1b";
     /* fa-plus */
     font-size: 28px;
 }
@@ -408,18 +408,14 @@ section {
     padding: 0;
 }
 
-
-/* Grid - RS-MQF 1140 V.2 - https://www.os-templates.com/free-basic-html5-templates/rs-mqf-1140
---------------------------------------------------------------------------------------------------------------- */
-
 .one_half,
 .one_third,
 .two_third,
 .one_quarter,
 .two_quarter,
 .three_quarter {
-    display: inline-block;
-    /* float: left; */
+    /* display: inline-block; */
+    float: left;
     margin: 0 0 0 4.21052%;
     list-style: none;
 }
