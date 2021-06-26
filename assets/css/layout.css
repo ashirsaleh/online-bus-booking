@@ -1,42 +1,9 @@
 @charset "utf-8";
-/*
-Template Name: Chillaid
-Author: <a href="https://www.os-templates.com/">OS Templates</a>
-Author URI: https://www.os-templates.com/
-Copyright: OS-Templates.com
-Licence: Free to use under our free template licence terms
-Licence URI: https://www.os-templates.com/template-terms
-File: Layout CSS
-*/
-
-@import url("fontawesome-free/css/fontawesome-all.min.css");
+@import url("font-awesome.css");
 @import url("framework.css");
-
-/* Rows
---------------------------------------------------------------------------------------------------------------- */
-.row0,
-.row0 a {}
-
-.row1,
-.row1 a {}
-
-.row2,
-.row2 a {}
-
-.row3,
-.row3 a {}
-
-.row4,
-.row4 a {}
-
-.row5,
-.row5 a {}
-
 
 /* Header
 --------------------------------------------------------------------------------------------------------------- */
-#header {}
-
 #header #logo {
 	margin: 22px 0 0 0;
 }
@@ -80,7 +47,6 @@ File: Layout CSS
 }
 
 /* Content */
-.container .content {}
 
 .sectiontitle {
 	display: block;
@@ -92,8 +58,6 @@ File: Layout CSS
 .sectiontitle * {
 	margin: 0;
 }
-
-.elements {}
 
 .elements-three li,
 .elements-four li {
@@ -157,14 +121,11 @@ File: Layout CSS
 /* 160px => 80px + container padding */
 
 /* Services */
-#services {}
 
 #services .elements article {
 	border-radius: 0;
 }
 
-/* Shout */
-.shout {}
 
 .shout figure {
 	display: block;
@@ -172,7 +133,6 @@ File: Layout CSS
 	/* same width as the image - contains the caption */
 }
 
-.shout figure img {}
 
 .shout figure figcaption {
 	display: block;
@@ -194,16 +154,13 @@ File: Layout CSS
 	width: 30px;
 	height: 30px;
 	line-height: 30px;
-	font-family: "Font Awesome\ 5 Free";
+	font-family: "Font Awesome";
 	font-weight: 900;
-	content: "\f105";
+	content: "\f1c";
 	/* fa-angle-right */
 	text-align: center;
 	border-radius: 50%;
 }
-
-/* Team Members */
-.team {}
 
 .team li:last-child {
 	margin-bottom: 0;
@@ -219,10 +176,6 @@ File: Layout CSS
 	margin: 0;
 	padding: 0;
 }
-
-.team figure a {}
-
-.team figure img {}
 
 .team figure figcaption {
 	padding: 20px 10px;
@@ -244,51 +197,7 @@ File: Layout CSS
 	font-size: .8rem;
 }
 
-/* Easy Pie Charts */
-.pr-charts {}
-
-.pr-charts .pr-chart-ctrl {
-	display: block;
-	float: left;
-	width: 25%;
-	min-height: 200px;
-}
-
-.pr-charts .pr-chart-ctrl .pr-chart {
-	display: block;
-	position: relative;
-	width: 100%;
-	margin: 0 0 20px 0;
-	text-align: center;
-}
-
-.pr-charts .pr-chart-ctrl .pr-chart canvas {
-	display: block;
-	margin: 0 auto;
-	padding: 0;
-	vertical-align: top;
-}
-
-.pr-charts .pr-chart-ctrl .pr-chart i {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 200px;
-	line-height: 200px;
-	font-size: 18px;
-	font-style: normal;
-}
-
-/* Must have same height & line height as set in the javascript size element to vertical align centre */
-.pr-charts .pr-chart-ctrl p {
-	margin: 0;
-	padding: 0;
-	text-transform: uppercase;
-}
-
 /* Testimonials */
-#testimonials {}
 
 #testimonials article {
 	text-align: center;
@@ -342,18 +251,11 @@ File: Layout CSS
 }
 
 /* Latest */
-#latest {}
-
 #latest>li:last-child {
 	margin-bottom: 0;
 }
 
 /* Used when elements stack in small viewports */
-#latest article {}
-
-#latest article figure {}
-
-#latest article figure img {}
 
 #latest article .meta {
 	display: block;
@@ -629,12 +531,6 @@ File: Layout CSS
 	padding: 0;
 }
 
-
-/* Transition Fade
-This gives a smooth transition to "ALL" elements used in the layout - other than the navigation form used in mobile devices
-If you don't want it to fade all elements, you have to list the ones you want to be faded individually
-Delete it completely to stop fading
---------------------------------------------------------------------------------------------------------------- */
 *,
 *::before,
 *::after {
@@ -644,14 +540,6 @@ Delete it completely to stop fading
 #mainav form * {
 	transition: none !important;
 }
-
-
-/* ------------------------------------------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------------------------------------------ */
-
 
 /* Navigation
 --------------------------------------------------------------------------------------------------------------- */
