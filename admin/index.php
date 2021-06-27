@@ -76,7 +76,7 @@ if (!isset($_SESSION['loggedIn']) || !isset($_SESSION['user'])) {
                     </thead>
                     <tbody>
                         <?php
-                        $list = $db->prepare('SELECT * FROM `tickets` JOIN `users` ON `tickets`.`userId` = `users`.`userId` JOIN `buses` ON `tickets`.`busId` = `buses`.`busId`');
+                        $list = $db->prepare('SELECT * FROM `tickets` JOIN `users` ON `tickets`.`userId` = `users`.`userId` JOIN `buses` ON `tickets`.`busId` = `buses`.`busId` ORDER BY `travelDate` ASC');
                         $list->execute();
 
                         $counter = 0;
@@ -127,7 +127,7 @@ if (!isset($_SESSION['loggedIn']) || !isset($_SESSION['user'])) {
                             echo '</tr>';
                         }
                         if ($list->rowCount() < 1) {
-                            echo '<tr><td colspan="12"><center><h1 style="font-size:3em;">There are no Buses at this time</h1></center></td></tr>';
+                            echo '<tr><td colspan="12"><center><h1 style="font-size:3em;">There are no Tickets</h1></center></td></tr>';
                         }
 
                         ?>
