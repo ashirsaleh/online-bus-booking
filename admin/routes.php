@@ -78,37 +78,36 @@ if (!isset($_SESSION['loggedIn']) || !isset($_SESSION['user'])) {
                     </thead>
                     <tbody>
                         <?php
-                        $list = $db->prepare('SELECT * FROM `buses`');
+                        $list = $db->prepare('SELECT * FROM `buses` GROUP BY `startFrom`');
                         $list->execute();
-                        $route = $list->fetch(PDO::FETCH_ASSOC);
-                        if ($list->rowCount() > 0) {
-                            for ($i = 1; $i <= $list->rowCount(); $i++) {
-                                echo '<tr>';
+                        $count = 0;
+                        while ($route = $list->fetch(PDO::FETCH_ASSOC)) {
+                            $count++;
+                            echo '<tr>';
                         ?>
-                                <td>
-                                    <center><?php echo $i ?></center>
-                                </td>
-                                <td>
-                                    <center><?php echo  $route['startFrom']; ?></center>
-                                </td>
-                                <td>
-                                    <center><?php echo  $route['destination']; ?></center>
-                                </td>
-                                <td>
-                                    <center><?php echo  $route['farePrice']; ?></center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <a class="btn btn-success" href="buses.php">View Buses</a>
-                                    </center>
-                                </td>
+                            <td>
+                                <center><?php echo $count ?></center>
+                            </td>
+                            <td>
+                                <center><?php echo  $route['startFrom']; ?></center>
+                            </td>
+                            <td>
+                                <center><?php echo  $route['destination']; ?></center>
+                            </td>
+                            <td>
+                                <center><?php echo  $route['farePrice']; ?></center>
+                            </td>
+                            <td>
+                                <center>
+                                    <a class="btn btn-success" href="buses.php">View Buses</a>
+                                </center>
+                            </td>
                         <?php
-                                echo '</tr>';
-                            }
-                        } else {
+                            echo '</tr>';
+                        }
+                        if ($list->rowCount() < 1) {
                             echo '<tr><td colspan="5"><center><h1 style="font-size:3em;">There are no Routes</h1></center></td></tr>';
                         }
-
                         ?>
                     </tbody>
                 </table>
