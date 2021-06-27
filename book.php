@@ -8,6 +8,7 @@ if (!isset($_SESSION['loggedIn']) || !isset($_SESSION['user'])) {
     header('location: login.php');
     exit;
 }
+$_SESSION['page'] = "";
 
 ?>
 <!DOCTYPE html>
@@ -39,72 +40,55 @@ if (!isset($_SESSION['loggedIn']) || !isset($_SESSION['user'])) {
         </header>
     </div>
     <div class="container-fluid">
-        <div class="container col-md-9 pt-5">
+        <div class="container col-md-6 pt-2">
             <div class="card card-primary card-outline">
                 <div class="card-header">
-                    <div class="row p-3">
-                        <h3>Online Booking Form</h3>
-                        <h6>To reserve seats please complete and submit the booking form.</h6>
-                    </div>
+                    <center>
+                        <div class="row">
+                            <h3>Online Booking Form</h3>
+                            <h6>To reserve seats please complete and submit the booking form.</h6>
+                        </div>
+                    </center>
                     <hr>
-                    <br>
-                    <div class="container">
-                        <div class="row">
-                            <div class="d-flex justify-content-between">
-                                <div class="form-group col-md-4">
-                                    <label for="inputState">From</label>
-                                    <select id="inputState" class="form-control">
-                                        <option selected>Choose...</option>
-                                        <option>...</option>
-                                    </select>
+                    <div class="row">
+                        <div class="jumbotron">
+                            <?php if (!$_SESSION['page'] || $_SESSION['page'] == "") { ?>
+                                <div class="container">
+                                    <form method="GET">
+                                        <div class="form-group">
+                                            <label for="from">From</label>
+                                            <select name="from" class="form-control form-control-lg">
+
+                                            </select>
+                                        </div> <br>
+                                        <div class="form-group">
+                                            <label for="to">Destination</label>
+                                            <select name="to" class="form-control form-control-lg selectpicker">
+                                                <option>Large select</option>
+                                            </select>
+                                        </div><br>
+                                        <div class="form-group">
+                                            <input type="reset" class="btn btn-primary" value="clear">
+                                            <input type="submit" name="destination" class="btn btn-success" style="float: right;" value="Choose Bus">
+                                        </div>
+                                    </form>
                                 </div>
-                                <div class="form-group col-md-4">
-                                    <label for="inputState">To</label>
-                                    <select id="inputState" class="form-control">
-                                        <option selected>Choose...</option>
-                                        <option>...</option>
-                                    </select>
+                            <?php } ?>
+                            <?php if ($_SESSION['page'] == 'selectBus') { ?>
+                                <div class="container">
+
                                 </div>
-                                <div class="form-group">
+                            <?php } ?>
+                            <?php if ($_SESSION['page'] == 'selectSeat') { ?>
+                                <div class="container">
+
                                 </div>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="form-group col-md-4">
-                            <label for="inputState">Choose Company</label>
-                            <select id="inputState" class="form-control">
-                                <option selected>Choose...</option>
-                                <option>...</option>
-                            </select>
-                        </div>
-                        <br>
-                        <div class="row p-3">
-                            <h6>Fill your Information</h6>
-                        </div>
-                        <div class="row">
-                            <div class="d-flex justify-content-between">
-                                <div class="form-group">
-                                    <label for="fullname">First Name:</label>
-                                    <input type="text" id="name" class="form-control">
+                            <?php } ?>
+                            <?php if ($_SESSION['page'] == 'confirmTicket') { ?>
+                                <div class="container">
+
                                 </div>
-                                <div class="form-group">
-                                    <label for="fullname">Last Name:</label>
-                                    <input type="text" id="name" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                </div>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="row">
-                            <div class="d-flex justify-content-between">
-                                <div class="form-group ">
-                                    <label for="phoonenumber">Phone Number</label>
-                                    <input type="numbers" id="phone-num" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                </div>
-                            </div>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>
