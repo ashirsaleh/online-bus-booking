@@ -1400,8 +1400,9 @@ textarea:focus,
 #mainav .active a,
 #mainav a:hover,
 #mainav li:hover>a {
-    color: #97A9BD;
-    background-color: inherit;
+    color: #FFFFFF;
+    background-color: #198754;
+    padding: 10px;
 }
 
 #mainav li li a,
@@ -1410,6 +1411,7 @@ textarea:focus,
     background-color: rgba(151, 169, 189, .5);
     border-color: rgba(151, 169, 189, .5);
     /* #97A9BD */
+    padding: 10px;
 }
 
 #mainav li li:hover>a,
