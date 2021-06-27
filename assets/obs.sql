@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jun 27, 2021 at 03:29 PM
+-- Generation Time: Jun 27, 2021 at 05:33 PM
 -- Server version: 10.3.29-MariaDB-0+deb10u1
 -- PHP Version: 7.3.27-1~deb10u1
 
@@ -89,7 +89,9 @@ CREATE TABLE `tickets` (
 
 INSERT INTO `tickets` (`ticketId`, `userId`, `busId`, `startFrom`, `destination`, `seatNo`, `Price`, `bookingDate`, `travelDate`, `status`) VALUES
 (1, 2, 4, 'Dar', 'Tanga', 1, 20000, '2021-06-27 15:20:25', '2021-06-28 15:18:45', '0'),
-(2, 3, 17, 'Iringa', 'Moshi', 1, 45000, '2021-06-27 15:20:25', '2021-06-30 15:18:45', '0');
+(2, 3, 17, 'Iringa', 'Moshi', 1, 45000, '2021-06-27 15:20:25', '2021-06-30 15:18:45', '0'),
+(3, 8, 15, 'Dar', 'Mbeya', 2, 35000, '2021-06-27 18:28:21', '2021-06-30 18:27:00', '1'),
+(4, 8, 10, 'Tanga', 'Songea', 2, 100000, '2021-06-27 18:28:21', '2021-07-08 18:27:00', '0');
 
 -- --------------------------------------------------------
 
@@ -121,7 +123,10 @@ INSERT INTO `users` (`userId`, `phoneEmail`, `password`, `firstName`, `lastName`
 (6, 'genes@gmail.com', '$2y$10$dLTLulPKTMNWS2o5dsTQe.R/8stULyqcbwcVljmgs9v4c8rCP.0/G', 'Lara', 'Short', '1234567890', 'user', 1),
 (7, 'Fpc@1998', '$2y$10$eS2edYnbPbrwLXeawEX0Pe4rZLZvYmFwdEd0Jzt.ItmKeP65IABB6', 'fau', 'chiko', '0623400173', 'user', 1),
 (8, 'faustin', '$2y$10$SfCecmdU3sFkhGD/gWjH0e4Yr8lfZrQiN9NvyjcmMmtfND5pveL.q', 'faustin', 'faustin', '0623400173', 'user', 1),
-(9, 'somename', '$2y$10$uIzZYCCAjhwUc2jq.fOlvupzW759gOEOSAzCWg7x6j4hjasmHvLYK', 'somename', 'somename', '0623565656', 'user', 1);
+(9, 'somename', '$2y$10$uIzZYCCAjhwUc2jq.fOlvupzW759gOEOSAzCWg7x6j4hjasmHvLYK', 'somename', 'somename', '0623565656', 'user', 1),
+(10, 'shaukani', '$2y$10$KT0c4Gbp2QQouiqRXQHSOORmPoe3nSHjLEf6GQY3QUsGMYiB/akGO', 'shau', 'mrisho', '0622160627', 'user', 1),
+(11, 'shaukanimrisho@gmail.com', '$2y$10$iNZYjAOngEBpWG48gKRwduXT89kWolqPASkmtsW8Pw/bQe2JDzrdS', 'fazili', 'mbawala', '0622160627', 'user', 1),
+(14, '0743456168', '$2y$10$IvQsApwajsuAjmZoMDOGPePRthprR/eOEtjE8fDwE7vRCW7GRJEg2', 'junior', 'frolian', '0743456168', 'user', 1);
 
 --
 -- Indexes for dumped tables
@@ -162,13 +167,13 @@ ALTER TABLE `buses`
 -- AUTO_INCREMENT for table `tickets`
 --
 ALTER TABLE `tickets`
-  MODIFY `ticketId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ticketId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `userId` bigint(13) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `userId` bigint(13) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- Constraints for dumped tables
