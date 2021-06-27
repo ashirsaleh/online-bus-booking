@@ -89,12 +89,12 @@ if (isset($_POST['signup'])) {
                                     <input type="text" name="emailphone" class="form-control" placeholder="Enter Your email/phone number you will use to login" required minlength="6" title="Phone number or email address you will use to login">
                                 </div>
                                 <div class="form-group" style="padding: 20px;">
-                                    <label for="phonenumber">Login Email/Phone</label>
+                                    <label for="phonenumber">Phone Number</label>
                                     <input type="text" name="phonenumber" class="form-control" placeholder="0600000000" required minlength="10" title="Phone number">
                                 </div>
                                 <div class="form-group" style="padding: 20px;">
                                     <label for="password">Password</label>
-                                    <input type="password" name="password" class="form-control" placeholder="********" required minlength="6">
+                                    <input type="password" name="password" class="form-control" placeholder="********" required minlength="4">
                                 </div>
                             </div>
                             <div class="card-footer" style="padding: 20px;">

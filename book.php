@@ -105,22 +105,11 @@ if (!isset($_SESSION['loggedIn']) || !isset($_SESSION['user'])) {
                                 </div>
                             </div>
                         </div>
-
-
-                        <!-- <input class="datepicker" data-date-format="mm/dd/yyyy"> -->
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </body>
-
-<script>
-    $('.datepicker').datepicker({
-        format: 'mm/dd/yyyy',
-        startDate: '-3d'
-    });
-</script>
 
 </html>

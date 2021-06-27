@@ -67,20 +67,71 @@ if (!isset($_SESSION['loggedIn']) || !isset($_SESSION['user'])) {
                             <th scope="col">Destination</th>
                             <th scope="col">Seat No</th>
                             <th scope="col">Ticket Price</th>
-                            <th scope="col">Bus Type</th>
                             <th scope="col">Bus Company</th>
+                            <th scope="col">Bus Type</th>
                             <th scope="col">Booking Date|Time</th>
                             <th scope="col">Travel Date|Time</th>
                             <th scope="col">Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
+                        <?php
+                        $list = $db->prepare('SELECT * FROM `tickets` JOIN `users` ON `tickets`.`userId` = `users`.`userId` JOIN `buses` ON `tickets`.`busId` = `buses`.`busId`');
+                        $list->execute();
+
+                        $counter = 0;
+                        while ($tickets = $list->fetch(PDO::FETCH_ASSOC)) {
+                            $counter++;
+                            echo '<tr>';
+                        ?>
+                            <td>
+                                <center><?php echo $counter; ?></center>
+                            </td>
+                            <td>
+                                <?php echo  $tickets['firstName'] . " " . $tickets['lastName']; ?>
+                            </td>
+                            <td>
+                                <center><?php echo  $tickets['phoneNumber']; ?></center>
+                            </td>
+                            <td>
+                                <center><?php echo  $tickets['startFrom']; ?></center>
+                            </td>
+                            <td>
+                                <center><?php echo  $tickets['destination']; ?></center>
+                            </td>
+                            <td>
+                                <center><?php echo  $tickets['seatNo']; ?></center>
+                            </td>
+                            <td>
+                                <center><?php echo  $tickets['farePrice']; ?></center>
+                            </td>
+                            <td>
+                                <center><?php echo  $tickets['name']; ?></center>
+                            </td>
+                            <td>
+                                <center><?php echo  $tickets['busType']; ?></center>
+                            </td>
+                            <td>
+                                <center><?php echo date('d F Y h:mA', strtotime($tickets['bookingDate'])); ?></center>
+                            </td>
+                            <td>
+                                <center><?php echo  date('d F Y h:mA', strtotime($tickets['travelDate'])); ?></center>
+                            </td>
+                            <td>
+                                <center>
+                                    <a class="btn btn-warning" href="editBus?id=<?php echo  $buses['busId']; ?>">Edit</a>
+                                    <a class="btn btn-danger" href="deleteBus?id=<?php echo  $buses['busId']; ?>">Edit</a>
+                                </center>
+                            </td>
+                        <?php
+
+                            echo '</tr>';
+                        }
+                        if ($list->rowCount() < 1) {
+                            echo '<tr><td colspan="12"><center><h1 style="font-size:3em;">There are no Buses at this time</h1></center></td></tr>';
+                        }
+
+                        ?>
                     </tbody>
                 </table>
             </div>

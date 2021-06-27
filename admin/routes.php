@@ -10,7 +10,6 @@ if (!isset($_SESSION['loggedIn']) || !isset($_SESSION['user'])) {
         exit;
     }
 }
-
 ?>
 
 <!DOCTYPE html>
