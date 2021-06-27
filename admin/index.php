@@ -119,8 +119,7 @@ if (!isset($_SESSION['loggedIn']) || !isset($_SESSION['user'])) {
                             </td>
                             <td>
                                 <center>
-                                    <a class="btn btn-warning" href="editBus?id=<?php echo  $buses['busId']; ?>">Edit</a>
-                                    <a class="btn btn-danger" href="deleteBus?id=<?php echo  $buses['busId']; ?>">Edit</a>
+                                    <a class="btn btn-danger" href="index?del=<?php echo  $tickets['ticketId']; ?>"><i class="fa fa-trash" aria-hidden="true"></i> Delete</a>
                                 </center>
                             </td>
                         <?php

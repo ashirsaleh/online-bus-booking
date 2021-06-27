@@ -102,55 +102,55 @@ if (!isset($_SESSION['loggedIn']) || !isset($_SESSION['user'])) {
                         <?php
                         $list = $db->prepare('SELECT * FROM `buses`');
                         $list->execute();
-                        $buses = $list->fetch(PDO::FETCH_ASSOC);
-                        if ($list->rowCount() > 0) {
-                            for ($i = 1; $i <= $list->rowCount(); $i++) {
-                                echo '<tr>';
+                        $count = 0;
+                        while ($buses = $list->fetch(PDO::FETCH_ASSOC)) {
+                            $count++;
+                            echo '<tr>';
                         ?>
-                                <td>
-                                    <center><?php echo $i ?></center>
-                                </td>
-                                <td>
-                                    <center><?php echo  $buses['busPhoto']; ?></center>
-                                </td>
-                                <td>
-                                    <center><?php echo  $buses['name']; ?></center>
-                                </td>
-                                <td>
-                                    <center><?php echo  $buses['busType']; ?></center>
-                                </td>
-                                <td>
-                                    <center><?php echo  $buses['startFrom']; ?></center>
-                                </td>
-                                <td>
-                                    <center><?php echo  $buses['destination']; ?></center>
-                                </td>
-                                <td>
-                                    <center><?php echo  $buses['noSeats']; ?></center>
-                                </td>
-                                <td>
-                                    <center><?php echo  $buses['plateNo']; ?></center>
-                                </td>
-                                <td>
-                                    <center><?php echo  $buses['busPhone']; ?></center>
-                                </td>
-                                <td>
-                                    <center><?php echo  $buses['farePrice']; ?></center>
-                                </td>
-                                <td>
-                                    <center><?php echo  $buses['status']; ?></center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <a class="btn btn-warning" href="editBus?id=<?php echo  $buses['busId']; ?>">Edit</a>
-                                        <a class="btn btn-danger" href="deleteBus?id=<?php echo  $buses['busId']; ?>">Edit</a>
-                                    </center>
-                                </td>
+                            <td>
+                                <center><?php echo $count ?></center>
+                            </td>
+                            <td>
+                                <center><img src="../<?php echo  $buses['busPhoto']; ?>" style="width:160px !important; height: 130px !important;" alt="<?php echo  $buses['name']; ?>"></center>
+                            </td>
+                            <td>
+                                <center><?php echo  $buses['name']; ?></center>
+                            </td>
+                            <td>
+                                <center><?php echo  $buses['busType']; ?></center>
+                            </td>
+                            <td>
+                                <center><?php echo  $buses['startFrom']; ?></center>
+                            </td>
+                            <td>
+                                <center><?php echo  $buses['destination']; ?></center>
+                            </td>
+                            <td>
+                                <center><?php echo  $buses['noSeats']; ?></center>
+                            </td>
+                            <td>
+                                <center><?php echo  $buses['plateNo']; ?></center>
+                            </td>
+                            <td>
+                                <center><?php echo  $buses['busPhone']; ?></center>
+                            </td>
+                            <td>
+                                <center><?php echo  $buses['farePrice']; ?></center>
+                            </td>
+                            <td>
+                                <center><?php echo  $buses['status']; ?></center>
+                            </td>
+                            <td>
+                                <center>
+                                    <a class="btn btn-warning" href="buses.php?edit=<?php echo  $buses['busId']; ?>"><i class="fa fa-edit" aria-hidden="true"></i> Edit</a>
+                                    <a class="btn btn-danger" href="index.php?del=<?php echo  $buses['busId']; ?>"> <i class="fa fa-trash" aria-hidden="true"></i> Delete</a>
+                                </center>
+                            </td>
                         <?php
 
-                                echo '</tr>';
-                            }
-                        } else {
+                            echo '</tr>';
+                        }
+                        if ($list->rowCount() < 1) {
                             echo '<tr><td colspan="12"><center><h1 style="font-size:3em;">There are no Buses at this time</h1></center></td></tr>';
                         }
 
