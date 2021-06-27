@@ -37,7 +37,7 @@ session_start();
                         if ($_SESSION['role'] === 'admin') {
                             echo '<li><a href="admin/index.php"><i class="fa fa-user" aria-hidden="true"></i> Admin</a></li>';
                         }
-                        echo '<li><a href="login.php"><i class="fa fa-logout" aria-hidden="true"></i> Log Out</a></li>';
+                        echo '<li><a href="login.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a></li>';
                     }
                     ?>
                 </ul>

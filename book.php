@@ -32,7 +32,7 @@ if (!isset($_SESSION['loggedIn']) || !isset($_SESSION['user'])) {
                     <li><a href="./"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
                     <li><a href="gallery.php"><i class="fa fa-photo" aria-hidden="true"></i> Gallery</a></li>
                     <li class="active"><a href="book.php"><i class="fa fa-book" aria-hidden="true"></i> Book Now</a></li>
-                    <li><a href="login.php"><i class="fa fa-logout" aria-hidden="true"></i> Log Out</a></li>
+                    <li><a href="login.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a></li>
                 </ul>
             </nav>
         </header>

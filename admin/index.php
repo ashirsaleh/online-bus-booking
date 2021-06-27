@@ -32,11 +32,14 @@ if (!isset($_SESSION['loggedIn']) || !isset($_SESSION['user'])) {
             </div>
             <nav id="mainav" class="fl_right">
                 <ul class="clear">
-                    <li><a href="./"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+                    <li><a href="../index.php"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+                    <li class="active"><a href="./"><i class="fa fa-book" aria-hidden="true"></i> Tickets</a></li>
+                    <li><a href="buses.php"><i class="fa fa-bus" aria-hidden="true"></i> Buses</a></li>
+                    <li><a href="routes.php"><i class="fa fa-map" aria-hidden="true"></i> Routes</a></li>
                     <li><a href="../gallery.php"><i class="fa fa-photo" aria-hidden="true"></i> Gallery</a></li>
-                    <li class="active"><a href="../book.php"><i class="fa fa-book" aria-hidden="true"></i> Book Now</a></li>
+                    <li><a href="../book.php"><i class="fa fa-book" aria-hidden="true"></i> Book Now</a></li>
 
-                    <li><a href="../login.php"><i class="fa fa-logout" aria-hidden="true"></i> Log Out</a></li>
+                    <li><a href="../login.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a></li>
                 </ul>
             </nav>
         </header>
