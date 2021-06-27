@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 
 <html lang="">
@@ -19,11 +22,24 @@
             <nav id="mainav" class="fl_right">
                 <ul class="clear">
                     <li class="active"><a href="./"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-                    <li><a href="gallery.html"><i class="fa fa-photo" aria-hidden="true"></i> Gallery</a></li>
+                    <li><a href="gallery.php"><i class="fa fa-photo" aria-hidden="true"></i> Gallery</a></li>
                     <li><a href="book.php"><i class="fa fa-book" aria-hidden="true"></i> Book Now</a></li>
-                    <li><a href="login.php">Login</a></li>
-                    <li><a href="signup.php">Signup</a></li>
-                    </li>
+                    <?php
+                    //only show this buttons if the user is not logged in
+                    if (!isset($_SESSION['loggedIn'])) {
+                    ?>
+                        <li><a href="login.php">Login</a></li>
+                        <li><a href="signup.php">Signup</a></li>
+                        </li>
+                    <?php
+                    } else {
+                        //show a navigation to admin if the role == 'admin
+                        if ($_SESSION['role'] === 'admin') {
+                            echo '<li><a href="admin/index.php"><i class="fa fa-user" aria-hidden="true"></i> Admin</a></li>';
+                        }
+                        echo '<li><a href="login.php"><i class="fa fa-logout" aria-hidden="true"></i> Log Out</a></li>';
+                    }
+                    ?>
                 </ul>
             </nav>
         </header>
@@ -55,7 +71,7 @@
                             <h6 class="heading">ABOOD</h6>
                             <p>Bus Company description for this bus is here Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo optio accusamus vel ipsum exercitationem. Autem nesciunt magnam ut est vero exercitationem laborum et molestiae quasi
                                 facilis blanditiis, itaque iure qui.
-                                <p>
+                            <p>
                         </article>
                     </li>
                     <li class="one_quarter">
@@ -77,16 +93,16 @@
             <div class="row">
                 <section class="group shout">
                     <figure class="one_half first"><img src="assets/images/546x356.png" alt="Bus Photo">
-                        <figcaption class="heading"><a href="gallery.html">DAR LUX</a></figcaption>
+                        <figcaption class="heading"><a href="gallery.php">DAR LUX</a></figcaption>
                     </figure>
                     <figure class="one_half"><img src="assets/images/546x356.png" alt="Bus Photo">
-                        <figcaption class="heading"><a href="gallery.html">ABOOD</a></figcaption>
+                        <figcaption class="heading"><a href="gallery.php">ABOOD</a></figcaption>
                     </figure>
                     <figure class="one_half first"><img src="assets/images/546x356.png" alt="Bus Photo">
-                        <figcaption class="heading"><a href="gallery.html">NEW FORCE</a></figcaption>
+                        <figcaption class="heading"><a href="gallery.php">NEW FORCE</a></figcaption>
                     </figure>
                     <figure class="one_half"><img src="assets/images/546x356.png" alt="Bus Photo">
-                        <figcaption class="heading"><a href="gallery.html">KIMOTCO</a></figcaption>
+                        <figcaption class="heading"><a href="gallery.php">KIMOTCO</a></figcaption>
                     </figure>
                 </section>
             </div>
@@ -221,7 +237,7 @@
                     <li>
                         <article>
                             <p class="nospace btmspace-10"><a href="#">Online bus booking is one of the best ways to save your time instead of going physically to the bus station just to get the
-                                        tickets</a></p>
+                                    tickets</a></p>
                             <time class="block font-xs" datetime="2021-04-06">Friday, 6<sup>th</sup> April 2021</time>
                         </article>
                     </li>

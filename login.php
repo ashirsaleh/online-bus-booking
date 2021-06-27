@@ -1,6 +1,11 @@
 <?php
 session_start();
 require('includes/db.php');
+//destroy previous session
+unset($_SESSION['loggedIn']);
+unset($_SESSION['user']);
+unset($_SESSION['role']);
+
 
 if (isset($_POST['login'])) {
     $user = sanitizer($_POST['emailphone']);
@@ -15,14 +20,14 @@ if (isset($_POST['login'])) {
             if (password_verify($pass, $user['password'])) {
                 //set up user sessions
                 $_SESSION['loggedIn'] = true;
-                $_SESSION['user'] = $user['phoneEmail'];
+                $_SESSION['user'] = $user;
                 $_SESSION['role'] = $user['role'];
                 //redirect to admin page if role == 'admin'
                 if ($_SESSION['role'] == 'admin') {
                     header('location: admin/');
                     exit();
                 } else {
-                    $_SESSION['error'] = "Your still a user wheeeen";
+                    header('location: book.php');
                 }
             } else {
                 $_SESSION['error'] = "Wrong password Please try again";
@@ -34,6 +39,7 @@ if (isset($_POST['login'])) {
         // return this error if there is an empty field
         $_SESSION['error'] =  "Please fill in all the fields";
     }
+    echo password_hash('aquinnata', PASSWORD_DEFAULT);
 }
 ?>
 <!DOCTYPE html>
@@ -58,7 +64,7 @@ if (isset($_POST['login'])) {
                 <nav id="mainav" class="fl_right">
                     <ul class="clear">
                         <li><a href="./"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-                        <li><a href="gallery.html"><i class="fa fa-photo" aria-hidden="true"></i> Gallery</a></li>
+                        <li><a href="gallery.php"><i class="fa fa-photo" aria-hidden="true"></i> Gallery</a></li>
                         <li><a href="book.php"><i class="fa fa-book" aria-hidden="true"></i> Book Now</a></li>
                         <li class="active"><a href="login.php">Login</a></li>
                         <li><a href="signup.php">Signup</a></li>
@@ -85,18 +91,26 @@ if (isset($_POST['login'])) {
                                             </div>';
                                         unset($_SESSION['error']);
                                     }
+
+                                    //display message from signup page
+                                    if (isset($_SESSION['success'])) {
+                                        echo '<div class="alert alert-success fade show" role="alert">
+                                            <strong>Success! </strong> ' . $_SESSION['success'] . '
+                                            </div>';
+                                        unset($_SESSION['success']);
+                                    }
                                     ?>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group" style="padding: 20px;">
                                     <label for="emailphone">Email/Phone</label>
                                     <input type="text" name="emailphone" class="form-control" placeholder="Enter Your email/phone number" required minlength="6">
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group" style="padding: 20px;">
                                     <label for="password">Password</label>
                                     <input type="password" name="password" class="form-control" placeholder="********" required minlength="4">
                                 </div>
                             </div>
-                            <div class="card-footer">
+                            <div class="card-footer" style="padding: 20px;">
                                 <a href="signup.php" class="btn btn-success">Sign Up</a>
                                 <button type="submit" name="login" value="login" style="float: right;" class="btn btn-primary ">Log In</button>
                             </div>

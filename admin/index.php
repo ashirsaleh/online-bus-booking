@@ -25,6 +25,22 @@ if (!isset($_SESSION['loggedIn']) || !isset($_SESSION['user'])) {
 </head>
 
 <body id="top">
+    <div class="wrapper row1">
+        <header id="header" class="hoc clear">
+            <div id="logo" class="fl_left">
+                <h1 class="logoname"><a href="./">Online<span>bus</span>Booking</a></h1>
+            </div>
+            <nav id="mainav" class="fl_right">
+                <ul class="clear">
+                    <li><a href="./"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+                    <li><a href="../gallery.php"><i class="fa fa-photo" aria-hidden="true"></i> Gallery</a></li>
+                    <li class="active"><a href="../book.php"><i class="fa fa-book" aria-hidden="true"></i> Book Now</a></li>
+
+                    <li><a href="../login.php"><i class="fa fa-logout" aria-hidden="true"></i> Log Out</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
     <div class="container">
         <ul id="clothing-nav" class="nav nav-tabs" role="tablist">
             <li class="nav-item">
