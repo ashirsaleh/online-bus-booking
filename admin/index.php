@@ -1,12 +1,14 @@
 <?php
 session_start();
-include('connect.php');
+require('../includes/db.php');
 
 //check if the admin is logged in and the session variables are set
 if (!isset($_SESSION['loggedIn']) || !isset($_SESSION['user'])) {
-    // redirect the page to login route
-    header('location: ../login.php');
-    exit;
+    // redirect the page to login page
+    if ($_SESSION['role'] != 'admin') {
+        header('location: ../login.php');
+        exit;
+    }
 }
 
 ?>

@@ -1053,7 +1053,8 @@ textarea:focus,
     }
 }
 
-.btn,
+
+/* .btn,
 .btn.inverse:hover {
     color: #FFFFFF;
     background-color: #97A9BD;
@@ -1065,7 +1066,7 @@ textarea:focus,
     color: inherit;
     background-color: transparent;
     border-color: inherit;
-}
+} */
 
 .imgover:hover::before {
     background-color: rgba(151, 169, 189, .5);

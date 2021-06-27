@@ -1,3 +1,15 @@
+<?php
+session_start();
+require('includes/db.php');
+
+//check if the admin is logged in and the session variables are set
+if (!isset($_SESSION['loggedIn']) || !isset($_SESSION['user'])) {
+    // redirect the page to login route
+    header('location: ../login.php');
+    exit;
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +31,7 @@
                 <ul class="clear">
                     <li><a href="./"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
                     <li><a href="gallery.html"><i class="fa fa-photo" aria-hidden="true"></i> Gallery</a></li>
-                    <li class="active"><a href="book.html"><i class="fa fa-book" aria-hidden="true"></i> Book Now</a></li>
+                    <li class="active"><a href="book.php"><i class="fa fa-book" aria-hidden="true"></i> Book Now</a></li>
                     </li>
                 </ul>
             </nav>
@@ -41,16 +53,16 @@
                                 <div class="form-group col-md-4">
                                     <label for="inputState">From</label>
                                     <select id="inputState" class="form-control">
-                                            <option selected>Choose...</option>
-                                            <option>...</option>
-                                        </select>
+                                        <option selected>Choose...</option>
+                                        <option>...</option>
+                                    </select>
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="inputState">To</label>
                                     <select id="inputState" class="form-control">
-                                            <option selected>Choose...</option>
-                                            <option>...</option>
-                                        </select>
+                                        <option selected>Choose...</option>
+                                        <option>...</option>
+                                    </select>
                                 </div>
                                 <div class="form-group">
                                 </div>
@@ -60,9 +72,9 @@
                         <div class="form-group col-md-4">
                             <label for="inputState">Choose Company</label>
                             <select id="inputState" class="form-control">
-                                    <option selected>Choose...</option>
-                                    <option>...</option>
-                                </select>
+                                <option selected>Choose...</option>
+                                <option>...</option>
+                            </select>
                         </div>
                         <br>
                         <div class="row p-3">

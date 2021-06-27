@@ -2,7 +2,7 @@
 session_start();
 require('includes/db.php');
 
-if (isset($_POST['login'])) {
+if (isset($_POST['signup'])) {
     $user = sanitizer($_POST['emailphone']);
     $pass = sanitizer($_POST['password']);
     $msg = array();
@@ -60,8 +60,8 @@ if (isset($_POST['login'])) {
                         <li><a href="./"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
                         <li><a href="gallery.html"><i class="fa fa-photo" aria-hidden="true"></i> Gallery</a></li>
                         <li><a href="book.php"><i class="fa fa-book" aria-hidden="true"></i> Book Now</a></li>
-                        <li class="active"><a href="login.php">Login</a></li>
-                        <li><a href="signup.php">Signup</a></li>
+                        <li><a href="login.php">Login</a></li>
+                        <li class="active"><a href="signup.php">Signup</a></li>
                         </li>
                     </ul>
                 </nav>
@@ -72,7 +72,7 @@ if (isset($_POST['login'])) {
                 <div class="col-md-5">
                     <div class="card card-primary">
                         <div class="card-header d-flex justify-content-center">
-                            <h3 class="card-title">Online Bus Booking Login</h3>
+                            <h3 class="card-title">Online Bus Booking Signup</h3>
                         </div>
                         <form method="post" action="login.php">
                             <div class="card-body">
@@ -87,18 +87,27 @@ if (isset($_POST['login'])) {
                                     }
                                     ?>
                                 </div>
+                                <div class="row form-group">
+                                    <div class="col">
+                                        <label for="firstName">First Name</label>
+                                        <input type="text" name="firstName" class="form-control" placeholder="First name" required>
+                                    </div>
+                                    <div class="col">
+                                        <label for="lastName">Last Name</label>
+                                        <input type="text" class="form-control" placeholder="Last name" required>
+                                    </div>
+                                </div>
                                 <div class="form-group">
-                                    <label for="emailphone">Email/Phone</label>
-                                    <input type="text" name="emailphone" class="form-control" placeholder="Enter Your email/phone number" required minlength="6">
+                                    <label for="emailphone">Login Email/Phone</label>
+                                    <input type="text" name="emailphone" class="form-control" placeholder="Enter Your email/phone number" required minlength="6" title="Phone number or email address you will use to login">
                                 </div>
                                 <div class="form-group">
                                     <label for="password">Password</label>
-                                    <input type="password" name="password" class="form-control" placeholder="********" required minlength="4">
+                                    <input type="password" name="password" class="form-control" placeholder="********" required minlength="6">
                                 </div>
                             </div>
                             <div class="card-footer">
-                                <a href="signup.php" class="btn btn-success">Sign Up</a>
-                                <button type="submit" name="login" value="login" style="float: right;" class="btn btn-primary ">Log In</button>
+                                <button type="submit" name="login" value="login" class="btn btn-primary ">Log In</button>
                             </div>
                         </form>
                     </div>
