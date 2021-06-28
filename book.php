@@ -8,7 +8,25 @@ if (!isset($_SESSION['loggedIn']) || !isset($_SESSION['user'])) {
     header('location: login.php');
     exit;
 }
-$_SESSION['page'] = "";
+//forms processing
+if (isset($_POST['destination'])) {
+    //process the destination selecting form
+    $from = $_POST['from'];
+    $to = $_POST['destination'];
+    //move to the next form
+    $_SESSION['page'] = 'selectBus';
+    header('location: book.php?from=' . $from . '&to=' . $to);
+}
+if (isset($_POST['selectBus'])) {
+    //process the bus selecting form
+    echo $_GET['from'];
+}
+if (isset($_POST['selectSeat'])) {
+    //process the seat selecting form
+}
+if (isset($_POST['confirmTicket'])) {
+    //process the ticket confimation screen
+}
 
 ?>
 <!DOCTYPE html>
@@ -58,18 +76,21 @@ $_SESSION['page'] = "";
                                         <div class="form-group">
                                             <label for="from">From</label>
                                             <select name="from" class="form-control form-control-lg">
-
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
                                             </select>
                                         </div> <br>
                                         <div class="form-group">
                                             <label for="to">Destination</label>
                                             <select name="to" class="form-control form-control-lg selectpicker">
-                                                <option>Large select</option>
+                                                <option value="12">12</option>
                                             </select>
                                         </div><br>
                                         <div class="form-group">
                                             <input type="reset" class="btn btn-primary" value="clear">
-                                            <input type="submit" name="destination" class="btn btn-success" style="float: right;" value="Choose Bus">
+                                            <input type="submit" name="destination" class="btn btn-success" style="float: right;" value="route">
                                         </div>
                                     </form>
                                 </div>

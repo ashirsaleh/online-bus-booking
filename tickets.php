@@ -8,7 +8,6 @@ if (!isset($_SESSION['loggedIn']) || !isset($_SESSION['user'])) {
     header('location: login.php');
     exit;
 }
-$_SESSION['page'] = "";
 
 ?>
 <!DOCTYPE html>
