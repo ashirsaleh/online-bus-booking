@@ -44,7 +44,7 @@ session_start();
             </nav>
         </header>
     </div>
-    <div class="bgded overlay" style="background-image:url('assets/images/backgrounds/01.png');">
+    <div class="bgded overlay" style="background-image:url('assets/images/backgrounds/1.jpg');">
         <div id="pageintro" class="hoc clear">
             <article>
                 <h3 class="heading">Welcome To Online Bus Booking</h3>
@@ -92,16 +92,16 @@ session_start();
             </section>
             <div class="row">
                 <section class="group shout">
-                    <figure class="one_half first"><img src="assets/images/546x356.png" alt="Bus Photo">
+                    <figure class="one_half first"><img src="assets/images/222.jpg" alt="Bus Photo">
                         <figcaption class="heading"><a href="gallery.php">DAR LUX</a></figcaption>
                     </figure>
-                    <figure class="one_half"><img src="assets/images/546x356.png" alt="Bus Photo">
+                    <figure class="one_half"><img src="assets/images/222.jpg" alt="Bus Photo">
                         <figcaption class="heading"><a href="gallery.php">ABOOD</a></figcaption>
                     </figure>
-                    <figure class="one_half first"><img src="assets/images/546x356.png" alt="Bus Photo">
+                    <figure class="one_half first"><img src="assets/images/222.jpg" alt="Bus Photo">
                         <figcaption class="heading"><a href="gallery.php">NEW FORCE</a></figcaption>
                     </figure>
-                    <figure class="one_half"><img src="assets/images/546x356.png" alt="Bus Photo">
+                    <figure class="one_half"><img src="assets/images/222.jpg" alt="Bus Photo">
                         <figcaption class="heading"><a href="gallery.php">KIMOTCO</a></figcaption>
                     </figure>
                 </section>
@@ -119,7 +119,7 @@ session_start();
             <ul id="latest" class="nospace group">
                 <li class="one_third first">
                     <article>
-                        <a class="imgover"><img src="assets/images/348x261.png" alt=""></a>
+                        <a class="imgover"><img src="assets/images/111.jpg" alt=""></a>
                         <ul class="nospace meta clear">
                             <li><i class="fa fa-user"></i> <a href="#">John Samwel</a></li>
                             <li><i class="fa fa-comments"></i>
@@ -134,7 +134,7 @@ session_start();
                 </li>
                 <li class="one_third">
                     <article>
-                        <a class="imgover"><img src="assets/images/348x261.png" alt=""></a>
+                        <a class="imgover"><img src="assets/images/111.jpg" alt=""></a>
                         <ul class="nospace meta clear">
                             <li><i class="fa fa-user"></i> <a href="#">Hicker Chicker</a></li>
                             <li><i class="fa fa-comments"></i>
@@ -151,7 +151,7 @@ session_start();
                 </li>
                 <li class="one_third">
                     <article>
-                        <a class="imgover"><img src="assets/images/348x261.png" alt=""></a>
+                        <a class="imgover"><img src="assets/images/111.jpg" alt=""></a>
                         <ul class="nospace meta clear">
                             <li><i class="fa fa-user"></i> <a href="#">John Samson</a></li>
                             <li><i class="fa fa-comments"></i>
@@ -167,7 +167,7 @@ session_start();
             </ul>
         </section>
     </div>
-    <div class="bgded overlay row4" style="background-image:url('assets/imagesdemo/backgrounds/01.png');">
+    <div class="bgded overlay row4" style="background-image:url('assets/images/backgrounds/1.jpg');">
         <footer id="footer" class="hoc clear">
             <div class="one_third first">
                 <h1 class="logoname"><a href="./">Online<span>Bus</span>Booking</a></h1>
@@ -186,47 +186,47 @@ session_start();
                 <ul class="nospace clear latestimg">
                     <li>
                         <a class="imgover" href="#">
-                            <img src="assets/images/100x100.png" alt="sample image">
+                            <img src="assets/images/11.jpg" alt="sample image">
                         </a>
                     </li>
                     <li>
                         <a class="imgover" href="#">
-                            <img src="assets/images/100x100.png" alt="sample image">
+                            <img src="assets/images/11.jpg" alt="sample image">
                         </a>
                     </li>
                     <li>
                         <a class="imgover" href="#">
-                            <img src="assets/images/100x100.png" alt="sample image">
+                            <img src="assets/images/11.jpg" alt="sample image">
                         </a>
                     </li>
                     <li>
                         <a class="imgover" href="#">
-                            <img src="assets/images/100x100.png" alt="sample image">
+                            <img src="assets/images/11.jpg" alt="sample image">
                         </a>
                     </li>
                     <li>
                         <a class="imgover" href="#">
-                            <img src="assets/images/100x100.png" alt="sample image">
+                            <img src="assets/images/11.jpg" alt="sample image">
                         </a>
                     </li>
                     <li>
                         <a class="imgover" href="#">
-                            <img src="assets/images/100x100.png" alt="sample image">
+                            <img src="assets/images/11.jpg" alt="sample image">
                         </a>
                     </li>
                     <li>
                         <a class="imgover" href="#">
-                            <img src="assets/images/100x100.png" alt="sample image">
+                            <img src="assets/images/11.jpg" alt="sample image">
                         </a>
                     </li>
                     <li>
                         <a class="imgover" href="#">
-                            <img src="assets/images/100x100.png" alt="sample image">
+                            <img src="assets/images/11.jpg" alt="sample image">
                         </a>
                     </li>
                     <li>
                         <a class="imgover" href="#">
-                            <img src="assets/images/100x100.png" alt="sample image">
+                            <img src="assets/images/11.jpg" alt="sample image">
                         </a>
                     </li>
                 </ul>

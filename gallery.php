@@ -43,7 +43,7 @@ session_start();
             </nav>
         </header>
     </div>
-    <div class="bgded overlay" style="background-image:url('assets/imagesdemo/backgrounds/01.png');">
+    <div class="bgded overlay" style="background-image:url('assets/images/backgrounds/1.jpg');">
         <div id="breadcrumb" class="hoc clear">
         </div>
     </div>
@@ -56,40 +56,40 @@ session_start();
                         <header class="heading">Buses Photo Gallery</header>
                         <ul class="nospace clear">
                             <li class="one_quarter first">
-                                <a href="#"><img src="assets/images/gallery/01.png" alt=""></a>
+                                <a href="#"><img src="assets/images/gallery/1.jpg" alt=""></a>
                             </li>
                             <li class="one_quarter">
-                                <a href="#"><img src="assets/images/gallery/01.png" alt=""></a>
+                                <a href="#"><img src="assets/images/gallery/1.jpg" alt=""></a>
                             </li>
                             <li class="one_quarter">
-                                <a href="#"><img src="assets/images/gallery/01.png" alt=""></a>
+                                <a href="#"><img src="assets/images/gallery/1.jpg" alt=""></a>
                             </li>
                             <li class="one_quarter">
-                                <a href="#"><img src="assets/images/gallery/01.png" alt=""></a>
+                                <a href="#"><img src="assets/images/gallery/1.jpg" alt=""></a>
                             </li>
                             <li class="one_quarter first">
-                                <a href="#"><img src="assets/images/gallery/01.png" alt=""></a>
+                                <a href="#"><img src="assets/images/gallery/1.jpg" alt=""></a>
                             </li>
                             <li class="one_quarter">
-                                <a href="#"><img src="assets/images/gallery/01.png" alt=""></a>
+                                <a href="#"><img src="assets/images/gallery/1.jpg" alt=""></a>
                             </li>
                             <li class="one_quarter">
-                                <a href="#"><img src="assets/images/gallery/01.png" alt=""></a>
+                                <a href="#"><img src="assets/images/gallery/1.jpg" alt=""></a>
                             </li>
                             <li class="one_quarter">
-                                <a href="#"><img src="assets/images/gallery/01.png" alt=""></a>
+                                <a href="#"><img src="assets/images/gallery/1.jpg" alt=""></a>
                             </li>
                             <li class="one_quarter first">
-                                <a href="#"><img src="assets/images/gallery/01.png" alt=""></a>
+                                <a href="#"><img src="assets/images/gallery/1.jpg" alt=""></a>
                             </li>
                             <li class="one_quarter">
-                                <a href="#"><img src="assets/images/gallery/01.png" alt=""></a>
+                                <a href="#"><img src="assets/images/gallery/1.jpg" alt=""></a>
                             </li>
                             <li class="one_quarter">
-                                <a href="#"><img src="assets/images/gallery/01.png" alt=""></a>
+                                <a href="#"><img src="assets/images/gallery/1.jpg" alt=""></a>
                             </li>
                             <li class="one_quarter">
-                                <a href="#"><img src="assets/images/gallery/01.png" alt=""></a>
+                                <a href="#"><img src="assets/images/gallery/1.jpg" alt=""></a>
                             </li>
                         </ul>
                         <figcaption>Here a re some of the images for buses that can be booked online</figcaption>
@@ -100,7 +100,7 @@ session_start();
             <div class="clear"></div>
         </main>
     </div>
-    <div class="bgded overlay row4" style="background-image:url('assets/imagesdemo/backgrounds/01.png');">
+    <div class="bgded overlay row4" style="background-image:url('assets/images/backgrounds/1.jpg');">
         <footer id="footer" class="hoc clear">
             <div class="one_third first">
                 <h1 class="logoname"><a href="./">Online<span>Bus</span>Booking</a></h1>
@@ -119,47 +119,47 @@ session_start();
                 <ul class="nospace clear latestimg">
                     <li>
                         <a class="imgover" href="#">
-                            <img src="assets/images/100x100.png" alt="sample image">
+                            <img src="assets/images/11.jpg" alt="sample image">
                         </a>
                     </li>
                     <li>
                         <a class="imgover" href="#">
-                            <img src="assets/images/100x100.png" alt="sample image">
+                            <img src="assets/images/11.jpg" alt="sample image">
                         </a>
                     </li>
                     <li>
                         <a class="imgover" href="#">
-                            <img src="assets/images/100x100.png" alt="sample image">
+                            <img src="assets/images/11.jpg" alt="sample image">
                         </a>
                     </li>
                     <li>
                         <a class="imgover" href="#">
-                            <img src="assets/images/100x100.png" alt="sample image">
+                            <img src="assets/images/11.jpg" alt="sample image">
                         </a>
                     </li>
                     <li>
                         <a class="imgover" href="#">
-                            <img src="assets/images/100x100.png" alt="sample image">
+                            <img src="assets/images/11.jpg" alt="sample image">
                         </a>
                     </li>
                     <li>
                         <a class="imgover" href="#">
-                            <img src="assets/images/100x100.png" alt="sample image">
+                            <img src="assets/images/11.jpg" alt="sample image">
                         </a>
                     </li>
                     <li>
                         <a class="imgover" href="#">
-                            <img src="assets/images/100x100.png" alt="sample image">
+                            <img src="assets/images/11.jpg" alt="sample image">
                         </a>
                     </li>
                     <li>
                         <a class="imgover" href="#">
-                            <img src="assets/images/100x100.png" alt="sample image">
+                            <img src="assets/images/11.jpg" alt="sample image">
                         </a>
                     </li>
                     <li>
                         <a class="imgover" href="#">
-                            <img src="assets/images/100x100.png" alt="sample image">
+                            <img src="assets/images/11.jpg" alt="sample image">
                         </a>
                     </li>
                 </ul>
