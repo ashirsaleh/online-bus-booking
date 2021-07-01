@@ -991,7 +991,7 @@ td {
 --------------------------------------------------------------------------------------------------------------- */
 
 body {
-    background-color: #ededed;
+    background-color: #6a3b96;
 }
 
 a {
@@ -1714,4 +1714,19 @@ table a,
     .font-x3 {
         font-size: 1.8rem;
     }
+}
+.imagerv{
+    width: 300px; height: 300px;
+}
+.img-gallery{
+    width: 50px; height: 60px;
+}
+.imgbuses{
+    width: 600px; height: 500px;
+}
+.gallaryrv{
+    width: 200px; height: 100px;
+}
+.imgg{
+    width: 50px; height: 60px;
 }

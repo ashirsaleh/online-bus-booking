@@ -53,7 +53,7 @@ session_start();
                 </p>
             </article>
         </div>
-    </div>
+    </div><br><br><br><br>
     <div class="wrapper row3">
         <main class="hoc container clear">
             <!-- main body -->
@@ -62,47 +62,46 @@ session_start();
                     <li class="one_quarter">
                         <article><a href="book.php"><i class="fa fa-bus"></i></a>
                             <h6 class="heading">DAR LUX</h6>
-                            <p>Bus Company description for this bus is here Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo optio accusamus vel ipsum exercitationem. Autem nesciunt magnam ut est vero exercitationem laborum et molestiae quasi
-                                facilis blanditiis, itaque iure qui.</p>
+                            <p>Welcome to our company!</p>
+                            <p>Enjoy the world</p>
                         </article>
                     </li>
                     <li class="one_quarter">
                         <article><a href="book.php"><i class="fa fa-bus"></i></a>
                             <h6 class="heading">ABOOD</h6>
-                            <p>Bus Company description for this bus is here Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo optio accusamus vel ipsum exercitationem. Autem nesciunt magnam ut est vero exercitationem laborum et molestiae quasi
-                                facilis blanditiis, itaque iure qui.
-                            <p>
+                            <p>Welcome to our company!</p>
+                            <p>Enjoy the world</p>
                         </article>
                     </li>
                     <li class="one_quarter">
                         <article><a href="book.php"><i class="fa fa-bus"></i></a>
                             <h6 class="heading">NEW FORCE</h6>
-                            <p>Bus Company description for this bus is here Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo optio accusamus vel ipsum exercitationem. Autem nesciunt magnam ut est vero exercitationem laborum et molestiae quasi
-                                facilis blanditiis, itaque iure qui.</p>
+                            <p>Welcome to our company!</p>
+                            <p>Enjoy the world</p>
                         </article>
                     </li>
                     <li class="one_quarter">
                         <article><a href="book.php"><i class="fa fa-bus"></i></a>
                             <h6 class="heading">SUPER FEO</h6>
-                            <p>Bus Company description for this bus is here Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo optio accusamus vel ipsum exercitationem. Autem nesciunt magnam ut est vero exercitationem laborum et molestiae quasi
-                                facilis blanditiis, itaque iure qui.</p>
+                            <p>Welcome to our company!</p>
+                            <p>Enjoy the world</p>
                         </article>
                     </li>
                 </ul>
             </section>
             <div class="row">
                 <section class="group shout">
-                    <figure class="one_half first"><img src="assets/images/222.jpg" alt="Bus Photo">
+                    <figure class="one_half first"><img src="assets/images/05.jpg" class="imgbuses" alt="Bus Photo">
                         <figcaption class="heading"><a href="gallery.php">DAR LUX</a></figcaption>
                     </figure>
-                    <figure class="one_half"><img src="assets/images/222.jpg" alt="Bus Photo">
+                    <figure class="one_half"><img src="assets/images/03.png" class="imgbuses" alt="Bus Photo">
                         <figcaption class="heading"><a href="gallery.php">ABOOD</a></figcaption>
                     </figure>
-                    <figure class="one_half first"><img src="assets/images/222.jpg" alt="Bus Photo">
+                    <figure class="one_half first"><img src="assets/images/02.jpeg" class="imgbuses" alt="Bus Photo">
                         <figcaption class="heading"><a href="gallery.php">NEW FORCE</a></figcaption>
                     </figure>
-                    <figure class="one_half"><img src="assets/images/222.jpg" alt="Bus Photo">
-                        <figcaption class="heading"><a href="gallery.php">KIMOTCO</a></figcaption>
+                    <figure class="one_half"><img src="assets/images/07.jpg" class="imgbuses" alt="Bus Photo">
+                        <figcaption class="heading"><a href="gallery.php">SUPER FEO</a></figcaption>
                     </figure>
                 </section>
             </div>
@@ -119,39 +118,38 @@ session_start();
             <ul id="latest" class="nospace group">
                 <li class="one_third first">
                     <article>
-                        <a class="imgover"><img src="assets/images/111.jpg" alt=""></a>
+                        <a class="imgover"><img src="assets/images/123.jpg" class="imagerv" alt=""></a>
                         <ul class="nospace meta clear">
-                            <li><i class="fa fa-user"></i> <a href="#">John Samwel</a></li>
+                            <li><i class="fa fa-user"></i> <a href="#">Chikondo faustin</a></li>
                             <li><i class="fa fa-comments"></i>
                                 <a href="#"></a>
                             </li>
                         </ul>
                         <div class="excerpt">
                             <time datetime="2021-04-05T08:15+00:00">05 Apr 2021</time>
-                            <p class="heading">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis incidunt, nam sed suscipit dolorum porro ipsum tenetur explicabo ea reprehenderit pariatur velit similique dolore adipisci, at iusto doloremque! Rem, minus?</p>
+                            <p class="heading">Fantastic.......big up to you developers!!!
                         </div>
                     </article>
                 </li>
                 <li class="one_third">
                     <article>
-                        <a class="imgover"><img src="assets/images/111.jpg" alt=""></a>
+                        <a class="imgover"><img src="assets/images/1234.jpg" class="imagerv" alt=""></a>
                         <ul class="nospace meta clear">
-                            <li><i class="fa fa-user"></i> <a href="#">Hicker Chicker</a></li>
+                            <li><i class="fa fa-user"></i> <a href="#">Mrisho shaukani</a></li>
                             <li><i class="fa fa-comments"></i>
                                 <a href="#"></a>
                             </li>
                         </ul>
                         <div class="excerpt">
                             <time datetime="2021-04-04T08:15+00:00">04 Apr 2021</time>
-                            <p class="heading">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dolore quas velit recusandae inventore reiciendis aperiam? Dicta dolorem incidunt, saepe commodi, perferendis blanditiis maiores aut, neque minima accusamus animi
-                                similique!
+                            <p class="heading">I appliciate you all
                             </p>
                         </div>
                     </article>
                 </li>
                 <li class="one_third">
                     <article>
-                        <a class="imgover"><img src="assets/images/111.jpg" alt=""></a>
+                        <a class="imgover"><img src="assets/images/111.jpg" class="imagerv" alt=""></a>
                         <ul class="nospace meta clear">
                             <li><i class="fa fa-user"></i> <a href="#">John Samson</a></li>
                             <li><i class="fa fa-comments"></i>
@@ -160,7 +158,7 @@ session_start();
                         </ul>
                         <div class="excerpt">
                             <time datetime="2021-04-03T08:15+00:00">03 Apr 2021</time>
-                            <p class="heading">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, ipsa voluptatum eveniet eum obcaecati earum iste, iure nostrum consequatur, sit dolor? Sit vitae explicabo quasi, quae vero expedita in voluptatum?</p>
+                            <p class="heading">Congratulations
                         </div>
                     </article>
                 </li>
@@ -186,47 +184,47 @@ session_start();
                 <ul class="nospace clear latestimg">
                     <li>
                         <a class="imgover" href="#">
-                            <img src="assets/images/11.jpg" alt="sample image">
+                            <img src="assets/images/06.jpg" class="img-gallery" alt="sample image">
                         </a>
                     </li>
                     <li>
                         <a class="imgover" href="#">
-                            <img src="assets/images/11.jpg" alt="sample image">
+                            <img src="assets/images/111.jpg" class="img-gallery" alt="sample image">
                         </a>
                     </li>
                     <li>
                         <a class="imgover" href="#">
-                            <img src="assets/images/11.jpg" alt="sample image">
+                            <img src="assets/images/05.jpg" class="img-gallery" alt="sample image">
                         </a>
                     </li>
                     <li>
                         <a class="imgover" href="#">
-                            <img src="assets/images/11.jpg" alt="sample image">
+                            <img src="assets/images/06.jpg" class="img-gallery" alt="sample image">
                         </a>
                     </li>
                     <li>
                         <a class="imgover" href="#">
-                            <img src="assets/images/11.jpg" alt="sample image">
+                            <img src="assets/images/07.jpg" class="img-gallery" alt="sample image">
                         </a>
                     </li>
                     <li>
                         <a class="imgover" href="#">
-                            <img src="assets/images/11.jpg" alt="sample image">
+                            <img src="assets/images/111.jpg" class="img-gallery" alt="sample image">
                         </a>
                     </li>
                     <li>
                         <a class="imgover" href="#">
-                            <img src="assets/images/11.jpg" alt="sample image">
+                            <img src="assets/images/04.jpg" class="img-gallery" alt="sample image">
                         </a>
                     </li>
                     <li>
                         <a class="imgover" href="#">
-                            <img src="assets/images/11.jpg" alt="sample image">
+                            <img src="assets/images/06.jpg" class="img-gallery" alt="sample image">
                         </a>
                     </li>
                     <li>
                         <a class="imgover" href="#">
-                            <img src="assets/images/11.jpg" alt="sample image">
+                            <img src="assets/images/222.jpg" alt="sample image">
                         </a>
                     </li>
                 </ul>
@@ -238,13 +236,13 @@ session_start();
                         <article>
                             <p class="nospace btmspace-10"><a href="#">Online bus booking is one of the best ways to save your time instead of going physically to the bus station just to get the
                                     tickets</a></p>
-                            <time class="block font-xs" datetime="2021-04-06">Friday, 6<sup>th</sup> April 2021</time>
+                            <time class="block font-xs" datetime="2021-04-06">Friday, 6<sup>th</sup> June 2021</time>
                         </article>
                     </li>
                     <li>
                         <article>
                             <p class="nospace btmspace-10"><a href="#">One of the best service you can get today is online bus booking</a></p>
-                            <time class="block font-xs" datetime="2021-04-05">Thursday, 5<sup>th</sup> April 2021</time>
+                            <time class="block font-xs" datetime="2021-04-05">Thursday, 5<sup>th</sup> June 2021</time>
                         </article>
                     </li>
                 </ul>

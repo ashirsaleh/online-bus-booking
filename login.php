@@ -39,7 +39,6 @@ if (isset($_POST['login'])) {
         // return this error if there is an empty field
         $_SESSION['error'] =  "Please fill in all the fields";
     }
-    echo password_hash('aquinnata', PASSWORD_DEFAULT);
 }
 ?>
 <!DOCTYPE html>

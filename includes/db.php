@@ -1,6 +1,8 @@
 <?php
-
-$db = new PDO('mysql:host=localhost;dbname=obs;', 'root', 'root');
+$dbname = "obs";
+$name = 'root';
+$pass = 'root';
+$db = new PDO('mysql:host=localhost;dbname=' . $dbname . ';', $name, $pass);
 
 function sanitizer($text) {
     //function to cleanup input text

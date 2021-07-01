@@ -8,26 +8,6 @@ if (!isset($_SESSION['loggedIn']) || !isset($_SESSION['user'])) {
     header('location: login.php');
     exit;
 }
-//forms processing
-if (isset($_POST['destination'])) {
-    //process the destination selecting form
-    $from = $_POST['from'];
-    $to = $_POST['destination'];
-    //move to the next form
-    $_SESSION['page'] = 'selectBus';
-    header('location: book.php?from=' . $from . '&to=' . $to);
-}
-if (isset($_POST['selectBus'])) {
-    //process the bus selecting form
-    echo $_GET['from'];
-}
-if (isset($_POST['selectSeat'])) {
-    //process the seat selecting form
-}
-if (isset($_POST['confirmTicket'])) {
-    //process the ticket confimation screen
-}
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -70,52 +50,55 @@ if (isset($_POST['confirmTicket'])) {
                     <hr>
                     <div class="row">
                         <div class="jumbotron">
-                            <?php if (!$_SESSION['page'] || $_SESSION['page'] == "") { ?>
-                                <div class="container">
-                                    <form method="GET">
-                                        <div class="form-group">
-                                            <label for="from">From</label>
-                                            <select name="from" class="form-control form-control-lg">
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                            </select>
-                                        </div> <br>
-                                        <div class="form-group">
-                                            <label for="to">Destination</label>
-                                            <select name="to" class="form-control form-control-lg selectpicker">
-                                                <option value="12">12</option>
-                                            </select>
-                                        </div><br>
-                                        <div class="form-group">
-                                            <input type="reset" class="btn btn-primary" value="clear">
-                                            <input type="submit" name="destination" class="btn btn-success" style="float: right;" value="route">
-                                        </div>
-                                    </form>
-                                </div>
-                            <?php } ?>
-                            <?php if ($_SESSION['page'] == 'selectBus') { ?>
-                                <div class="container">
-
-                                </div>
-                            <?php } ?>
-                            <?php if ($_SESSION['page'] == 'selectSeat') { ?>
-                                <div class="container">
-
-                                </div>
-                            <?php } ?>
-                            <?php if ($_SESSION['page'] == 'confirmTicket') { ?>
-                                <div class="container">
-
-                                </div>
-                            <?php } ?>
+                            <div class="container">
+                                <form method="GET" action="selectBus.php">
+                                    <div class="form-group">
+                                        <label for="from">From</label>
+                                        <select name="from" class="form-control form-control-lg" required>
+                                            <option value="" disabled selected hidden>-- SELECT STARTING POINT -- </option>
+                                            <?php
+                                            $frm = $db->prepare('SELECT DISTINCT `startFrom` FROM buses');
+                                            $frm->execute();
+                                            while ($from = $frm->fetch(PDO::FETCH_ASSOC)) {
+                                                echo "<option value='" . $from['startFrom'] . "'>" . $from['startFrom'] . "</option>";
+                                            }
+                                            ?>
+                                        </select>
+                                    </div> <br>
+                                    <div class="form-group">
+                                        <label for="to">Destination</label>
+                                        <select name="to" class="form-control form-control-lg selectpicker" required>
+                                            <option value="" disabled selected hidden>-- SELECT YOUR DESTINATION -- </option>
+                                            <?php
+                                            $frm = $db->prepare('SELECT DISTINCT `destination` FROM buses');
+                                            $frm->execute();
+                                            while ($from = $frm->fetch(PDO::FETCH_ASSOC)) {
+                                                echo "<option value='" . $from['destination'] . "'>" . $from['destination'] . "</option>";
+                                            }
+                                            ?>
+                                        </select>
+                                    </div><br>
+                                    <div class="form-group">
+                                        <label for="travelDate">Travelling Date</label>
+                                        <input type="date" class="form-control form-control-lg setTodaysDate" name="travelDate" required>
+                                    </div> <br>
+                                    <div class="form-group">
+                                        <input type="reset" class="btn btn-primary" value="clear">
+                                        <input type="submit" name="selectBus" class="btn btn-success" style="float: right;" value="Select Bus">
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+        // prevent selecting dates before today
+        var today = new Date().toISOString().split('T')[0];
+        document.getElementsByClassName("setTodaysDate")[0].setAttribute('min', today);
+    </script>
 </body>
 
 </html>

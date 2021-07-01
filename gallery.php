@@ -56,40 +56,40 @@ session_start();
                         <header class="heading">Buses Photo Gallery</header>
                         <ul class="nospace clear">
                             <li class="one_quarter first">
-                                <a href="#"><img src="assets/images/gallery/1.jpg" alt=""></a>
+                                <a href="#"><img src="assets/images/gallery/04.jpg" class="gallaryrv" alt=""></a>
                             </li>
                             <li class="one_quarter">
-                                <a href="#"><img src="assets/images/gallery/1.jpg" alt=""></a>
+                                <a href="#"><img src="assets/images/gallery/02.jpeg" class="gallaryrv" alt=""></a>
                             </li>
                             <li class="one_quarter">
-                                <a href="#"><img src="assets/images/gallery/1.jpg" alt=""></a>
+                                <a href="#"><img src="assets/images/gallery/06.jpg" class="gallaryrv" alt=""></a>
                             </li>
                             <li class="one_quarter">
-                                <a href="#"><img src="assets/images/gallery/1.jpg" alt=""></a>
+                                <a href="#"><img src="assets/images/gallery/04.jpg" class="gallaryrv" alt=""></a>
                             </li>
                             <li class="one_quarter first">
-                                <a href="#"><img src="assets/images/gallery/1.jpg" alt=""></a>
+                                <a href="#"><img src="assets/images/gallery/05.jpg" class="gallaryrv" alt=""></a>
                             </li>
                             <li class="one_quarter">
-                                <a href="#"><img src="assets/images/gallery/1.jpg" alt=""></a>
+                                <a href="#"><img src="assets/images/gallery/06.jpg" class="gallaryrv" alt=""></a>
                             </li>
                             <li class="one_quarter">
-                                <a href="#"><img src="assets/images/gallery/1.jpg" alt=""></a>
+                                <a href="#"><img src="assets/images/gallery/07.jpg" class="gallaryrv" alt=""></a>
                             </li>
                             <li class="one_quarter">
-                                <a href="#"><img src="assets/images/gallery/1.jpg" alt=""></a>
+                                <a href="#"><img src="assets/images/gallery/08.jpg" class="gallaryrv" alt=""></a>
                             </li>
                             <li class="one_quarter first">
-                                <a href="#"><img src="assets/images/gallery/1.jpg" alt=""></a>
+                                <a href="#"><img src="assets/images/gallery/04.jpg" class="gallaryrv" alt=""></a>
                             </li>
                             <li class="one_quarter">
-                                <a href="#"><img src="assets/images/gallery/1.jpg" alt=""></a>
+                                <a href="#"><img src="assets/images/gallery/05.jpg" class="gallaryrv" alt=""></a>
                             </li>
                             <li class="one_quarter">
-                                <a href="#"><img src="assets/images/gallery/1.jpg" alt=""></a>
+                                <a href="#"><img src="assets/images/gallery/07.jpg" class="gallaryrv" alt=""></a>
                             </li>
                             <li class="one_quarter">
-                                <a href="#"><img src="assets/images/gallery/1.jpg" alt=""></a>
+                                <a href="#"><img src="assets/images/gallery/02.jpeg" class="gallaryrv" alt=""></a>
                             </li>
                         </ul>
                         <figcaption>Here a re some of the images for buses that can be booked online</figcaption>
@@ -119,37 +119,37 @@ session_start();
                 <ul class="nospace clear latestimg">
                     <li>
                         <a class="imgover" href="#">
-                            <img src="assets/images/11.jpg" alt="sample image">
+                            <img src="assets/images/03.png" class="imgg" alt="sample image">
                         </a>
                     </li>
                     <li>
                         <a class="imgover" href="#">
-                            <img src="assets/images/11.jpg" alt="sample image">
+                            <img src="assets/images/111.jpg" class="imgg" alt="sample image">
                         </a>
                     </li>
                     <li>
                         <a class="imgover" href="#">
-                            <img src="assets/images/11.jpg" alt="sample image">
+                            <img src="assets/images/02.jpeg" class="imgg" alt="sample image">
                         </a>
                     </li>
                     <li>
                         <a class="imgover" href="#">
-                            <img src="assets/images/11.jpg" alt="sample image">
+                            <img src="assets/images/05.jpg" class="imgg" alt="sample image">
                         </a>
                     </li>
                     <li>
                         <a class="imgover" href="#">
-                            <img src="assets/images/11.jpg" alt="sample image">
+                            <img src="assets/images/06.jpg" class="imgg" alt="sample image">
                         </a>
                     </li>
                     <li>
                         <a class="imgover" href="#">
-                            <img src="assets/images/11.jpg" alt="sample image">
+                            <img src="assets/images/07.jpg" class="imgg" alt="sample image">
                         </a>
                     </li>
                     <li>
                         <a class="imgover" href="#">
-                            <img src="assets/images/11.jpg" alt="sample image">
+                            <img src="assets/images/111.jpg" class="imgg" alt="sample image">
                         </a>
                     </li>
                     <li>
@@ -171,13 +171,13 @@ session_start();
                         <article>
                             <p class="nospace btmspace-10"><a href="#">Online bus booking is one of the best ways to save your time instead of going physically to the bus station just to get the
                                     tickets</a></p>
-                            <time class="block font-xs" datetime="2021-04-06">Friday, 6<sup>th</sup> April 2021</time>
+                            <time class="block font-xs" datetime="2021-04-06">Friday, 6<sup>th</sup> June 2021</time>
                         </article>
                     </li>
                     <li>
                         <article>
                             <p class="nospace btmspace-10"><a href="#">One of the best service you can get today is online bus booking</a></p>
-                            <time class="block font-xs" datetime="2021-04-05">Thursday, 5<sup>th</sup> April 2021</time>
+                            <time class="block font-xs" datetime="2021-04-05">Thursday, 5<sup>th</sup> June 2021</time>
                         </article>
                     </li>
                 </ul>
