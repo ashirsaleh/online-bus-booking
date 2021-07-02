@@ -43,6 +43,7 @@ if (isset($_GET['del'])) {
                 <ul class="clear">
                     <li><a href="../index.php"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
                     <li class="active"><a href="./"><i class="fa fa-book" aria-hidden="true"></i> Tickets</a></li>
+                    <li><a href="users.php"><i class="fa fa-users" aria-hidden="true"></i> Users</a></li>
                     <li><a href="buses.php"><i class="fa fa-bus" aria-hidden="true"></i> Buses</a></li>
                     <li><a href="routes.php"><i class="fa fa-map" aria-hidden="true"></i> Routes</a></li>
                     <li><a href="../gallery.php"><i class="fa fa-photo" aria-hidden="true"></i> Gallery</a></li>

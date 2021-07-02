@@ -43,6 +43,7 @@ if (isset($_GET['del'])) {
                 <ul class="clear">
                     <li><a href="../index.php"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
                     <li><a href="./"><i class="fa fa-book" aria-hidden="true"></i> Tickets</a></li>
+                    <li><a href="users.php"><i class="fa fa-users" aria-hidden="true"></i> Users</a></li>
                     <li class="active"><a href="buses.php"><i class="fa fa-bus" aria-hidden="true"></i> Buses</a></li>
                     <li><a href="routes.php"><i class="fa fa-map" aria-hidden="true"></i> Routes</a></li>
                     <li><a href="../gallery.php"><i class="fa fa-photo" aria-hidden="true"></i> Gallery</a></li>
@@ -58,6 +59,7 @@ if (isset($_GET['del'])) {
             <div class="card">
                 <div class="row hoc">
                     <h1 class="heading" style="font-size: 4em; padding:10px">List of all Buses</h1>
+                    <a href="addbus.php" style="float: right;" class="btn btn-success">Add Bus</a> <br>
                 </div>
             </div>
             <div class="row d-flex" style="padding: 0 10 10 10; margin:2px">
@@ -142,11 +144,14 @@ if (isset($_GET['del'])) {
                                 <center><?php echo  $buses['farePrice']; ?></center>
                             </td>
                             <td>
-                                <center><?php echo  $buses['status']; ?></center>
+                                <center><?php if ($buses['status'] == 1) {
+                                            echo "<a class='btn btn-success'>Active</a>";
+                                        } else {
+                                            echo "<a class='btn btn-warning'>Disabled</a>";
+                                        } ?></center>
                             </td>
                             <td>
                                 <center>
-                                    <a class="btn btn-warning" href="buses.php?edit=<?php echo  $buses['busId']; ?>"><i class="fa fa-edit" aria-hidden="true"></i> Edit</a>
                                     <a class="btn btn-danger" href="buses.php?del=<?php echo  $buses['busId']; ?>"> <i class="fa fa-trash" aria-hidden="true"></i> Delete</a>
                                 </center>
                             </td>

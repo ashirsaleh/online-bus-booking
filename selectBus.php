@@ -434,7 +434,7 @@ if (isset($_GET['selectBusSeat'])) {
                                     </div>
                                     <div class="form-group">
                                         <a href="book.php" class="btn btn-primary"> Choose Another Route</a>
-                                        <input type="submit" name="selectBusSeat" class="btn btn-success" style="float: right;" value="route">
+                                        <input type="submit" name="selectBusSeat" class="btn btn-success" style="float: right;" value="Submit">
                                     </div>
                                 </form>
                             </div>

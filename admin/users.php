@@ -10,13 +10,18 @@ if (!isset($_SESSION['loggedIn']) || !isset($_SESSION['user'])) {
         exit;
     }
 }
+if (isset($_GET['del'])) {
+    $del = $db->prepare("DELETE FROM `users` WHERE `userId` =?");
+    $del->execute(array($_GET['del']));
+}
+
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>Routes | Online Bus Booking</title>
+    <title>Online Bus Booking</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="../assets/css/bootstrap.css" media="all">
@@ -38,9 +43,9 @@ if (!isset($_SESSION['loggedIn']) || !isset($_SESSION['user'])) {
                 <ul class="clear">
                     <li><a href="../index.php"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
                     <li><a href="./"><i class="fa fa-book" aria-hidden="true"></i> Tickets</a></li>
-                    <li><a href="users.php"><i class="fa fa-users" aria-hidden="true"></i> Users</a></li>
+                    <li class="active"><a href="users.php"><i class="fa fa-users" aria-hidden="true"></i> Users</a></li>
                     <li><a href="buses.php"><i class="fa fa-bus" aria-hidden="true"></i> Buses</a></li>
-                    <li class="active"><a href="routes.php"><i class="fa fa-map" aria-hidden="true"></i> Routes</a></li>
+                    <li><a href="routes.php"><i class="fa fa-map" aria-hidden="true"></i> Routes</a></li>
                     <li><a href="../gallery.php"><i class="fa fa-photo" aria-hidden="true"></i> Gallery</a></li>
                     <li><a href="../book.php"><i class="fa fa-book" aria-hidden="true"></i> Book Now</a></li>
 
@@ -53,62 +58,70 @@ if (!isset($_SESSION['loggedIn']) || !isset($_SESSION['user'])) {
         <div class="container-fluid">
             <div class="card">
                 <div class="row hoc">
-                    <h1 class="heading" style="font-size: 4em; padding:10px">List of Available Routes</h1>
+                    <h1 class="heading" style="font-size: 4em; padding:10px">USERS</h1>
                 </div>
             </div>
-            <div class="row d-flex" style="padding: 0 10 10 10; margin:2px">
-                <table class="table table-hover table-responsive">
+            <div class="row d-flex justify-content-center" style="padding: 0 10 10 10; margin:2px">
+                <table class="table table-hover table-center table-responsive">
                     <thead>
                         <tr class="bg-dark">
-                            <th scope="col">
-                                <center>No.</center>
-                            </th>
-                            <th scope="col">
-                                <center>From</center>
-                            </th>
-                            <th scope="col">
-                                <center>Destination</center>
-                            </th>
-                            <th scope="col">
-                                <center>Bus Fair Price</center>
-                            </th>
-                            <th scope="col">
-                                <center>Destination</center>
-                            </th>
+                            <th scope="col">No.</th>
+                            <th scope="col">Full Name</th>
+                            <th scope="col">Login</th>
+                            <th scope="col">Phone Number</th>
+                            <th scope="col">Role</th>
+                            <th scope="col">Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php
-                        $list = $db->prepare('SELECT * FROM `buses` GROUP BY `startFrom`');
+                        $list = $db->prepare('SELECT * FROM `users` ORDER BY `role`');
                         $list->execute();
-                        $count = 0;
-                        while ($route = $list->fetch(PDO::FETCH_ASSOC)) {
-                            $count++;
+
+                        $counter = 0;
+                        while ($users = $list->fetch(PDO::FETCH_ASSOC)) {
+                            $counter++;
                             echo '<tr>';
                         ?>
                             <td>
-                                <center><?php echo $count ?></center>
+                                <center><?php echo $counter; ?></center>
                             </td>
                             <td>
-                                <center><?php echo  $route['startFrom']; ?></center>
+                                <?php echo  $users['firstName'] . " " . $users['lastName']; ?>
                             </td>
                             <td>
-                                <center><?php echo  $route['destination']; ?></center>
+                                <center><?php echo  $users['phoneEmail']; ?></center>
                             </td>
                             <td>
-                                <center><?php echo  $route['farePrice']; ?></center>
+                                <center><?php echo  $users['phoneNumber']; ?></center>
                             </td>
                             <td>
                                 <center>
-                                    <a class="btn btn-success" href="buses.php">View Buses</a>
+                                    <?php if ($users['role'] == 'admin') {
+                                        echo "<a class='btn btn-success'>ADMIN</a>";
+                                    } else {
+                                        echo "<a class='btn btn-secondary'>Passenger</a>";
+                                    }
+                                    ?></center>
+                            </td>
+                            <td>
+                                <center>
+                                    <?php
+                                    if ($users['role'] != 'admin') {
+                                        echo '
+                                    <a class="btn btn-danger" href="users.php?del=' . $users['userId'] . '><i class="fa fa-trash" aria-hidden="true"></i> Delete</a>';
+                                    }
+                                    ?>
                                 </center>
                             </td>
                         <?php
+
                             echo '</tr>';
                         }
                         if ($list->rowCount() < 1) {
-                            echo '<tr><td colspan="5"><center><h1 style="font-size:3em;">There are no Routes</h1></center></td></tr>';
+                            echo '<tr><td colspan="12"><center><h1 style="font-size:3em;">There are no Tickets</h1></center></td></tr>';
                         }
+
                         ?>
                     </tbody>
                 </table>
