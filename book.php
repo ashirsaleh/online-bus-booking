@@ -32,6 +32,11 @@ if (!isset($_SESSION['loggedIn']) || !isset($_SESSION['user'])) {
                     <li><a href="gallery.php"><i class="fa fa-photo" aria-hidden="true"></i> Gallery</a></li>
                     <li class="active"><a href="book.php"><i class="fa fa-book" aria-hidden="true"></i> Book Now</a></li>
                     <li><a href="tickets.php"><i class="fa fa-file" aria-hidden="true"></i> Booked Tickets</a></li>
+                    <?php
+                    if ($_SESSION['role'] === 'admin') {
+                        echo '<li><a href="admin/index.php"><i class="fa fa-user" aria-hidden="true"></i> Admin</a></li>';
+                    }
+                    ?>
                     <li><a href="login.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a></li>
                 </ul>
             </nav>
@@ -80,7 +85,7 @@ if (!isset($_SESSION['loggedIn']) || !isset($_SESSION['user'])) {
                                     </div><br>
                                     <div class="form-group">
                                         <label for="travelDate">Travelling Date</label>
-                                        <input type="date" class="form-control form-control-lg setTodaysDate" name="travelDate" required>
+                                        <input type="datetime-local" class="form-control form-control-lg setTodaysDate" name="travelDate" required>
                                     </div> <br>
                                     <div class="form-group">
                                         <input type="reset" class="btn btn-primary" value="clear">

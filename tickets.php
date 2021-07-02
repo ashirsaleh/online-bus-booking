@@ -8,6 +8,10 @@ if (!isset($_SESSION['loggedIn']) || !isset($_SESSION['user'])) {
     header('location: login.php');
     exit;
 }
+if (isset($_GET['del'])) {
+    $del = $db->prepare("DELETE FROM `tickets` WHERE `ticketId` =?");
+    $del->execute(array($_GET['del']));
+}
 
 ?>
 <!DOCTYPE html>
@@ -33,6 +37,11 @@ if (!isset($_SESSION['loggedIn']) || !isset($_SESSION['user'])) {
                     <li><a href="gallery.php"><i class="fa fa-photo" aria-hidden="true"></i> Gallery</a></li>
                     <li><a href="book.php"><i class="fa fa-book" aria-hidden="true"></i> Book Now</a></li>
                     <li class="active"><a href="tickets.php"><i class="fa fa-file" aria-hidden="true"></i> Booked Tickets</a></li>
+                    <?php
+                    if ($_SESSION['role'] === 'admin') {
+                        echo '<li><a href="admin/index.php"><i class="fa fa-user" aria-hidden="true"></i> Admin</a></li>';
+                    }
+                    ?>
                     <li><a href="login.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out</a></li>
                 </ul>
             </nav>
@@ -91,7 +100,7 @@ if (!isset($_SESSION['loggedIn']) || !isset($_SESSION['user'])) {
                             <center><?php echo  $tickets['seatNo']; ?></center>
                         </td>
                         <td>
-                            <center><?php echo  $tickets['farePrice']; ?></center>
+                            <center><?php echo  $tickets['Price']; ?></center>
                         </td>
                         <td>
                             <center><?php echo  $tickets['name']; ?></center>
@@ -107,8 +116,8 @@ if (!isset($_SESSION['loggedIn']) || !isset($_SESSION['user'])) {
                         </td>
                         <td>
                             <center>
-                                <a class="btn btn-warning" href="tickets?view=<?php echo  $tickets['ticketId']; ?>"><i class="fa fa-file" aria-hidden="true"></i> View</a>
-                                <a class="btn btn-danger" href="tickets?del=<?php echo  $tickets['ticketId']; ?>"><i class="fa fa-trash" aria-hidden="true"></i> Delete</a>
+                                <a class="btn btn-warning" href="ticket.php?ticketId=<?php echo  $tickets['ticketId']; ?>"><i class="fa fa-file" aria-hidden="true"></i> View</a>
+                                <a class="btn btn-danger" href="tickets.php?del=<?php echo  $tickets['ticketId']; ?>"><i class="fa fa-trash" aria-hidden="true"></i> Delete</a>
                             </center>
                         </td>
                     <?php

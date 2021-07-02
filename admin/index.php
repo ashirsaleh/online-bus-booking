@@ -10,6 +10,10 @@ if (!isset($_SESSION['loggedIn']) || !isset($_SESSION['user'])) {
         exit;
     }
 }
+if (isset($_GET['del'])) {
+    $del = $db->prepare("DELETE FROM `tickets` WHERE `ticketId` =?");
+    $del->execute(array($_GET['del']));
+}
 
 ?>
 
@@ -119,7 +123,7 @@ if (!isset($_SESSION['loggedIn']) || !isset($_SESSION['user'])) {
                             </td>
                             <td>
                                 <center>
-                                    <a class="btn btn-danger" href="index?del=<?php echo  $tickets['ticketId']; ?>"><i class="fa fa-trash" aria-hidden="true"></i> Delete</a>
+                                    <a class="btn btn-danger" href="index.php?del=<?php echo  $tickets['ticketId']; ?>"><i class="fa fa-trash" aria-hidden="true"></i> Delete</a>
                                 </center>
                             </td>
                         <?php

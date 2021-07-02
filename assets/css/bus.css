@@ -71,15 +71,15 @@ ol {
 }
 
 .seat:nth-child(4) {
-    margin-right: 0rm;
+    margin-right: 0px !important;
 }
 
-.seat input[type=checkbox] {
+.seat input[type=radio] {
     position: absolute;
     opacity: 0;
 }
 
-.seat input[type=checkbox]:checked+label {
+.seat input[type=radio]:checked+label {
     background: #bada55;
     -webkit-animation-name: rubberBand;
     animation-name: rubberBand;
